@@ -124,6 +124,7 @@ class parseRestClient{
 
 	public function dataType($type,$params){
 		if($type != ''){
+			$return = false;
 			switch($type){
 				case 'date':
 					$return = array(
@@ -169,9 +170,6 @@ class parseRestClient{
 						"amount" => $params[0]
 					);
 					break;
-				default:
-					$return = false;
-					break;	
 			}
 			
 			return $return;
